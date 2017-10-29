@@ -1,0 +1,276 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="header no-print">
+  <nav class="navbar navbar-default navbar-static-top header">
+    <div class="container-fluid" style="background-color:#3D3D3D;color:#0FDBA1">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row ">
+            <br />
+
+        </div>
+        <div class="row">
+            <div class="navbar-header">
+
+                <button type="button" class="navbar-toggle navbar-toggle-sidebar collapsed col-md-2" style="color:#0FDBA1">
+                    MENU
+                </button>
+
+                <img src="assets/Images/IPProLogo.png" height="50px" style="margin-left:14px" />
+
+
+
+                <a id="agentlogin2" href="#/Register" *ngIf="! GetStatus()"><button type="button" id="agentbtn" style="background-color :#06FBB5 ;color :black ; margin-top:0px;font-size:10px ;font-weight:bold" class="btn  btn-lg button2 ff">Agent Sign Up</button></a>
+
+
+                <a id="agentlogin3" href="#" *ngIf="GetStatus()" class="text-center" style="margin-left:520px;">
+
+                    <button type="button" id="agentbtn" style="background-color :#3D3D3D ;color :#06FBB5 ; margin-top:0px;font-size:11px ;font-weight:bold ;font-family:Helvetica ;" class="btn  btn-lg button2 ff">{{HeaderMessage}}</button>
+                </a>
+
+                <button type="button" class="navbar-toggle collapsed col-md-3" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1, #agentlogin3">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+
+
+
+
+
+
+                <!--    <a class="navbar-brand" href="/#" style="color:white">
+                    Administrator
+                </a>  -->
+
+            </div>
+
+
+
+
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+                <ul class="nav navbar-nav navbar-right ff" style="margin-right:6px;">
+
+                    <li *ngIf="! GetStatus()">
+                        <a class="dropdown-menu2 ff " style="color:#316758;font-size:11px"  change-background2 count2="0" [ngStyle]="Getval2(15) ? {color: '#06FBB5' } : { color: '#0FDBA1' } " href="#/">Home</a>
+                    </li>
+
+                    <li *ngIf="! GetStatus()">
+                        <a class="dropdown-menu2 ff " style="color:#316758;font-size:11px"  change-background2 count2="21" ng-style="count == 21 ? {color: '#06FBB5' } : { color: '#0FDBA1' } " href="#/AboutUs">About Us</a>
+                    </li>
+
+
+
+                    <li *ngIf="! GetStatus()" style="color:#316758;">
+                        <a class="dropdown-menu2 ff" style="color:#316758;font-size:11px" change-background2 count2="23" ng-style="count == 24 ? {color: '#06FBB5' } : { color: '#0FDBA1' } " href="#">Online Services</a>
+                    </li>
+
+
+                    <li *ngIf="! GetStatus()" style="color:#316758;">
+                        <a class="dropdown-menu2 ff" style="color:#316758;font-size:11px" change-background2 count2="25" ng-style="count == 25 ? {color: '#06FBB5' } : { color: '#0FDBA1' } " href="#/SendMail">Contact Us</a>
+                    </li>
+
+                    <li *ngIf="GetStatus()">
+                        <button id="btn-signup3" go-click="/SelectedItem" class="btn btn-lg" popover-placement="bottom" uib-popover-html="htmlPopover" popover-trigger="mouseenter" style="color:black;font-size:10px; background-color :#06FBB5 ;margin-top:18px ;border-color: #06FBB5;border:none;border-radius: 6px;width:60px" href="#/Fee"><i class="glyphicon glyphicon3 glyphicon-shopping-cart"></i> &nbsp;({{vcount}}) </button>
+
+                    </li>
+
+                    <li style="color:#316758;" *ngIf="GetStatus()">
+
+                        <a class="dropdown-menu2 ff"  (click)="logout()" style="color:#316758;font-size:11px;" change-background2 count2="22" ng-style="count == 22 ? {color: '#06FBB5' } : { color: '#0FDBA1' } " href="#"><i class="glyphicon glyphicon-log-out"></i>&nbsp;LogOut</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Brand and toggle get grouped for better mobile display -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+</div>
+<div  *ngIf="GetStatus()">
+<div class="col-md-2 sidebar no-print " ng-show=islogin>
+    
+                        <div class="row">
+                            
+                        
+    
+                            
+                            <!-- uncomment code for absolute positioning tweek see top comment in css -->
+                            <div class="absolute-wrapper"> </div>
+                            <!-- Menu -->
+                            <div class="side-menu" id="fullcol" style="background-color:#616161">
+                                <nav class="navbar navbar-default" role="navigation" style="background-color:#616161">
+                                    <!-- Main Menu -->
+                                    <div class="side-menu-container">
+                                        <ul class="nav navbar-nav" style="background-color:#616161;color:white">
+                                      
+                                            <li  (click) ="setval2(14)"  ng-show="agentRole.Agent"><a ui-sref="PaymentType"  [ngStyle]="Getval2(14) ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161'}"><img src="assets/Images/icons-03.png" width="20px" height="20px" style="vertical-align:bottom;text-decoration:none" /> <span style="vertical-align:bottom;font-size:11px">Make Payment</span></a></li>
+                                            <li ng-show="agentRole.Agent" class="panel panel-default" id="dropdown"     ng-style="count2 == 0 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }">
+                                                <a data-toggle="collapse"  href="#dropdown-lvl1" eat-click style="text-decoration:none"  change-background2 count2="0" [ngStyle]="Getval2(10) ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }">
+                                                    <img src="assets/Images/icon_Purchases Unused.png" width="20px" height="20px" style="vertical-align:bottom;text-decoration:none" /> <span style="vertical-align:bottom;font-size:11px">File Application</span>  <span class="caret"></span>
+                                                </a>
+    
+                                                <!-- Dropdown level 1 -->
+                                                <div id="dropdown-lvl1" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="nav navbar-nav" style="background-color:#616161;color:white">
+                                                            <li (click)="setval(10)"   ><a ui-sref="ViewBasketTm"  style="text-decoration:underline;" ><img *ngIf="Getval(10)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Trademark &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+                                                            <li (click)="setval(11)" ><a ui-sref="ViewBasketPt" style="text-decoration:underline"><img *ngIf="Getval(11)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Patent &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+                                                            <li (click)="setval(12)" ><a ui-sref="ViewBasketDs" style="text-decoration:underline"> <img  *ngIf="Getval(12)"  src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Design &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+    
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+    
+                                            <li ng-show="agentRole.Agent" class="panel panel-default" id="dropdown"  ng-style="count2 == 10 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }">
+                                                <a data-toggle="collapse" href="#dropdown-lvl3" eat-click  style="text-decoration:none" change-background2 count2="10" [ngStyle]="Getval2(11) ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }">
+                                                    <img src="assets/Images/icon_Purchases Report.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:11px">Payment Report</span>  <span class="caret"></span>
+                                                </a>
+    
+                                                <!-- Dropdown level 1 -->
+                                                <div id="dropdown-lvl3" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="nav navbar-nav" style="background-color:#616161;color:white">
+                                                            <li (click)="setval(13)"><a href="#/TrademarkPaymentReport" style="text-decoration:underline;"><img *ngIf="Getval(13)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Trademark &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+                                                            <li (click)="setval(14)" ><a href="#/PatentPaymentReport" style="text-decoration:underline"><img *ngIf="Getval(14)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Patent &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+                                                            <li (click)="setval(15)" ><a href="#/DesignPaymentReport" style="text-decoration:underline"><img *ngIf="Getval(15)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Design &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+    
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+    
+    
+                                            <li ng-show="agentRole.Agent" class="panel panel-default" id="dropdown"  ng-style="count2 == 13 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }">
+                                                <a data-toggle="collapse"  href="#dropdown-lvl3a" eat-click style="text-decoration:none"  [ngStyle]="Getval2(12) ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }">
+                                                    <img src="assets/Images/icon_Status.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:11px">Application Status</span>  <span class="caret"></span>
+                                                </a>
+    
+                                                <!-- Dropdown level 1 -->
+                                                <div id="dropdown-lvl3a" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="nav navbar-nav" style="background-color:#616161;color:white">
+                                                            <li (click)="setval(16)" ><a href="#/TrademarkStatus" style="text-decoration:underline;"><img *ngIf="Getval(16)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Trademark &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+                                                            <li (click)="setval(17)"><a href="#/PatentStatus" style="text-decoration:underline"><img *ngIf="Getval(17)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Patent &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+                                                            <li (click)="setval(18)" ><a href="#/DesignStatus" style="text-decoration:underline"> <img *ngIf="Getval(18)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /><span style="vertical-align:bottom;font-size:10px"> Design &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+    
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+    
+                                            <li ng-show="agentRole.Agent" class="panel panel-default" id="dropdown" ng-style="count2 == 24 ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }">
+                                                <a data-toggle="collapse" href="#dropdown-lvl3aa" eat-click style="text-decoration:none" change-background2 count2="24" [ngStyle]="Getval2(13) ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }">
+                                                    <img src="assets/Images/icons-08.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:11px">Document Management</span>  <span class="caret"></span>
+                                                </a>
+    
+                                                <!-- Dropdown level 1 -->
+                                                <div id="dropdown-lvl3aa" class="panel-collapse collapse">
+                                                    <div class="panel-body">
+                                                        <ul class="nav navbar-nav" style="background-color:#616161;color:white">
+                                                            <li (click)="setval(19)"><a href="#/Recordal" style="text-decoration:underline;"><img *ngIf="Getval(19)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Recordal &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+                                                            <li (click)="setval(20)" ><a href="#/Certificate" style="text-decoration:underline;"><img *ngIf="Getval(20)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Pay  For Certificate &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+                                                            <li (click)="setval(21)" ><a href="#/UploadDoc" style="text-decoration:underline;"><img *ngIf="Getval(21)" src="assets/Images/sub-menu selection icon_Purchases Report copy.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:10px"> Update Documents &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></a></li>
+    
+    
+    
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li (click) ="setval2(15)"><a ui-sref="home" change-background2 count2="3" [ngStyle]="Getval2(15) ? {'background-color': '#3D3D3D'  } : { 'background-color': '#616161'}"><img src="assets/Images/icons-02.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:11px">MailBox</span></a></li>
+                                            <li (click) ="setval2(16)"><a href="#/UpdateRegistration" change-background2 count2="38" [ngStyle]="Getval2(16) ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }"><img src="assets/Images/Profile.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:11px">Profile</span></a></li>
+                                           
+                                            <li (click) ="setval2(17)" ><a href="#/SendMail" change-background2 count2="23" [ngStyle]="Getval2(17) ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }"><img src="assets/Images/icons-07.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:11px">Contact Us</span></a></li>
+    
+                                            <li (click) ="setval2(18)"><a href="#" change-background2 count2="22" [ngStyle]="Getval2(18) ? {'background-color': '#3D3D3D' } : { 'background-color': '#616161' }"><img src="assets/Images/icons-06.png" width="20px" height="20px" style="vertical-align:bottom" /> <span style="vertical-align:bottom;font-size:11px">Reports</span></a></li>
+    
+                                            <!-- Dropdown-->
+                                      
+    
+                                           
+    
+                                            
+    
+    
+    
+    
+                                        </ul>
+                                    </div><!-- /.navbar-collapse -->
+                                </nav>
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-10  nopadding " >
+
+<router-outlet  >
+  
+  
+      </router-outlet>
+
+                    </div>
+
+</div>
+
+<div  *ngIf="! GetStatus()">
+        <div class="col-md-12  nopadding " >
+                
+                <router-outlet  >
+                  
+                  
+                      </router-outlet>
+                
+                                    </div>
+
+</div>
+
+                    <div class="row container-fluid" style="overflow:hidden">
+                        
+                        
+                        
+                        
+                        
+                                    <footer class="pull-left  navbar-fixed-bottom" style="background-color:#3D3D3D;color:#0FDBA1 ;min-height:40px ">
+                        
+                                        <div class="col-md-12">
+                                            
+                                            
+                                            
+                                                                <div class="ff text-center " style="font-size:10px;font-family:Helvetica;">
+                                                                    Einao 
+                                            
+                                                                </div>
+                                            
+                                            
+                                            
+                                            
+                                                                <div class="text-center ">
+                                            
+                                                                    <img src="assets/Images/footer2.png" />
+                                            
+                                            
+                                                                </div>
+                                            
+                                                            </div>
+                        
+                                    </footer>
+                        
+                                </div>
+

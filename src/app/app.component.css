@@ -1,0 +1,208 @@
+
+html, body {
+background-color: white;
+
+}
+
+ body {
+font-family: "Quattrocento Sans", sans-serif; 
+
+}
+
+#agentbtn {
+background-color :#06FBB5;
+   
+  
+cursor:pointer;
+}
+
+#agentlogin2 {
+    text-decoration:none;
+border:0;
+outline:none;
+}
+
+
+.form-control2 {
+background-color : #939393 ;color :white  ;font-size:10px;
+}
+
+input::-webkit-input-placeholder {
+color: white !important;
+opacity:0.6 ;
+
+
+}
+
+input:-moz-placeholder { /* Firefox 18- */
+color: white !important;  
+opacity:0.6 ;
+
+
+}
+
+input::-moz-placeholder {  /* Firefox 19+ */
+color: white !important;  
+opacity:0.6 ;
+
+}
+
+input:-ms-input-placeholder {  
+color: white !important; 
+opacity:0.6  ;
+
+
+}
+
+
+li > a:hover, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+background-color: transparent;
+color: white;
+}
+
+
+
+
+li > a:hover {
+color: cyan;
+}  
+
+.navbar-default .navbar-nav>li>a {
+color: white;
+}  
+
+.glyphicon {color:#06FBB5 !important;}
+
+.glyphicon4 {color:white !important;}
+
+.button2 {
+margin-top: 0px;
+
+padding-top :5px;
+padding-bottom: 5px;
+   margin-bottom :30px;
+   margin-left :20px;
+
+
+}
+
+
+.ff {
+
+font-family:"Quattrocento Sans", "Open Sans";
+font-size: 10px;
+font-style: normal;
+font-variant: normal;
+
+
+font-weight: 500;
+
+
+
+
+}
+#fullcol {
+
+margin-bottom :-9999px;
+padding-bottom :9999px;
+}
+#cpp {
+
+
+
+}
+
+.nopadding {
+padding: 0 !important;
+margin: 0 !important;
+}
+
+.navbar {
+
+margin-bottom: 1px;
+
+}
+
+
+
+footer {
+overflow:hidden
+}
+
+
+
+
+.side-menu .navbar-nav li {
+
+border-bottom: 0px solid #939393;
+padding-left :10px;
+}
+
+.side-menu #dropdown > a {
+border-bottom: 0px solid #939393;
+}
+
+
+.side-menu #dropdown .panel-body .navbar-nav li {
+
+border-bottom: 0px solid #939393;
+}
+
+.side-menu .navbar-nav  {
+font-family:"Quattrocento Sans", Helvetica ;
+font-size :10px;
+
+}
+
+.glyphicon3 {color:black !important;}
+.popover {
+max-width: 1000px; /* optional max width */
+width: intrinsic; /* Safari/WebKit uses a non-standard name */
+width: -moz-max-content; /* Firefox/Gecko */
+width: -webkit-max-content; /* Chrome */
+
+background-color:#3D3D3D
+}
+
+.hr3{
+border-top: 4px solid #FFFFFF;
+margin-top :1px;
+}
+
+.sweet-alert button {
+background-color: #06FBB5 !important;
+color: black;
+
+
+
+}
+
+.helvetica-font {
+font-family: "Quattrocento Sans",Helvetica,'Helvetica Neue',Arial,sans-serif;
+font-size: 12px;
+}
+
+
+
+
+
+
+.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover {
+color: white;
+
+}
+
+.side-menu .navbar-nav li a .glyphicon4 {
+padding-right: 1px;
+}
+
+a:hover
+{
+text-decoration: none !important;
+color: #FFFFFF;
+}
+
+
+
+
+

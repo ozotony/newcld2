@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: "Quattrocento Sans", sans-serif; 
+    
+    }
+
+    .card.customClass,
+    .card.customClass .card-header,
+    .panel.customClass {
+      background-color: #939393;
+      color: #fff;
+    }
+    .panel.customClass .panel-body {
+      background-color: white;
+      color: #3D3D3D;
+    }
+
+    
+    .card.customClass2,
+    .card.customClass2 .card-header,
+    .panel.customClass2 {
+      background-color: #3D3D3D;
+      color: #fff;
+    }
+    .panel.customClass2 .panel-body {
+      background-color: white;
+      color: #3D3D3D;
+    }
+
